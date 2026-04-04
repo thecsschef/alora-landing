@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alora — The teaching system Pilates has never had.</title>
+  <title>Alora — The first system designed to make Pilates instructors measurably better.</title>
   <meta name="description" content="You teach the same class twice and you don't even know it. Alora is the first system built to make Pilates instructors measurably better." />
+  <link rel="icon" type="image/svg+xml" href="./assets/Alora_App_Tile_A1.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
@@ -48,62 +49,34 @@
     /* ══ HERO ══ */
     .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 0 56px; padding-top: 110px; position: relative; overflow: hidden; }
     .hero-mesh { position: absolute; inset: 0; pointer-events: none; z-index: 0;
-      background:
-        radial-gradient(ellipse 55% 65% at 85% 15%, rgba(254,169,150,.4) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 55% at 80% 90%, rgba(209,255,243,.48) 0%, transparent 60%),
-        radial-gradient(ellipse 35% 45% at 10% 50%, rgba(254,169,150,.1) 0%, transparent 60%);
+      background: radial-gradient(ellipse 55% 65% at 85% 15%, rgba(254,169,150,.4) 0%, transparent 65%),
+                  radial-gradient(ellipse 50% 55% at 80% 90%, rgba(209,255,243,.48) 0%, transparent 60%),
+                  radial-gradient(ellipse 35% 45% at 10% 50%, rgba(254,169,150,.1) 0%, transparent 60%);
       animation: mesh 18s ease-in-out infinite alternate; }
     @keyframes mesh { 0%{opacity:1;transform:scale(1)} 100%{opacity:.88;transform:scale(1.03)} }
-
     .hero-text { position: relative; z-index: 2; }
-
     .hero-chip { display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,.78); border: 1px solid rgba(254,169,150,.45); border-radius: 100px; padding: 7px 16px 7px 7px; margin-bottom: 40px; backdrop-filter: blur(8px); opacity: 0; transform: translateY(14px); animation: up .7s ease forwards .15s; }
     .chip-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--grad); }
     .chip-txt { font-size: 11px; font-weight: 500; letter-spacing: .06em; color: var(--mid); }
-
-    /* Hero headline — two distinct lines, different weights */
-    .hero-h1-interrupt {
-      font-family: var(--serif);
-      font-size: clamp(44px, 4.8vw, 72px);
-      line-height: 1.0;
-      letter-spacing: -.03em;
-      color: var(--dark);
-      margin-bottom: 20px;
-      opacity: 0; transform: translateY(22px);
-      animation: up .85s ease forwards .3s;
-    }
+    .hero-h1-interrupt { font-family: var(--serif); font-size: clamp(44px, 4.8vw, 72px); line-height: 1.0; letter-spacing: -.03em; color: var(--dark); margin-bottom: 20px; opacity: 0; transform: translateY(22px); animation: up .85s ease forwards .3s; }
     .hero-h1-interrupt em { font-style: italic; color: var(--muted); }
-
-    .hero-resolution {
-      display: inline-flex; align-items: center; gap: 16px;
-      margin-bottom: 36px;
-      opacity: 0; transform: translateY(16px);
-      animation: up .7s ease forwards .55s;
-    }
+    .hero-resolution { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 36px; opacity: 0; transform: translateY(16px); animation: up .7s ease forwards .55s; }
     .hero-resolution-line { width: 32px; height: 1px; background: var(--coral-d); flex-shrink: 0; }
-    .hero-resolution-text {
-      font-size: 14px; font-weight: 400; letter-spacing: .04em;
-      color: var(--mid); text-transform: uppercase;
-    }
-
+    .hero-resolution-text { font-size: 14px; font-weight: 400; letter-spacing: .04em; color: var(--mid); text-transform: uppercase; }
     .hero-sub { font-size: 18px; font-weight: 300; line-height: 1.72; color: var(--mid); max-width: 430px; margin-bottom: 48px; opacity: 0; transform: translateY(18px); animation: up .8s ease forwards .65s; }
-
     .hero-acts { display: flex; align-items: center; gap: 20px; opacity: 0; transform: translateY(16px); animation: up .8s ease forwards .8s; }
     .btn-p { display: inline-flex; align-items: center; gap: 10px; background: var(--grad); color: var(--dark); padding: 17px 36px; border-radius: 100px; font-size: 15px; font-weight: 600; letter-spacing: .02em; text-decoration: none; border: none; cursor: none; transition: transform .25s, box-shadow .25s, filter .25s; box-shadow: 0 6px 32px rgba(254,169,150,.5); }
     .btn-p:hover { transform: translateY(-2px); box-shadow: 0 12px 44px rgba(254,169,150,.6); filter: brightness(1.04); }
     .btn-p svg { transition: transform .25s; }
     .btn-p:hover svg { transform: translateX(4px); }
     .h-aside { font-size: 12px; color: var(--muted); letter-spacing: .02em; }
-
     .social { display: flex; align-items: center; gap: 14px; margin-top: 48px; opacity: 0; transform: translateY(14px); animation: up .8s ease forwards .95s; }
     .avs { display: flex; }
     .av { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--bg); margin-left: -7px; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: var(--dark); }
     .av:first-child { margin-left: 0; }
     .pt { font-size: 12px; color: var(--muted); line-height: 1.5; }
     .pt strong { color: var(--dark); }
-
     @keyframes up { to { opacity: 1; transform: translateY(0); } }
-
     .hero-ph { position: relative; z-index: 2; display: flex; justify-content: center; align-items: center; opacity: 0; transform: translateY(32px) scale(.97); animation: ph-in 1.1s cubic-bezier(.22,1,.36,1) forwards .45s; }
     @keyframes ph-in { to { opacity: 1; transform: translateY(0) scale(1); } }
 
@@ -181,6 +154,60 @@
     .sn span { background: var(--grad-vivid); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .sl { font-size: 15px; font-weight: 300; color: var(--mid); line-height: 1.55; }
 
+    /* ══ CATEGORY CLAIM — standalone, light, typographic ══ */
+    .category-standalone {
+      padding: 160px 56px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(26,22,20,.06);
+      border-bottom: 1px solid rgba(26,22,20,.06);
+    }
+    .cat-sa-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 50% 60% at 100% 50%, rgba(254,169,150,.1) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 0% 50%, rgba(209,255,243,.08) 0%, transparent 65%);
+    }
+    /* Ghost number — breaks the grid */
+    .cat-sa-ghost {
+      position: absolute;
+      right: -2%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--serif);
+      font-size: clamp(200px, 28vw, 380px);
+      line-height: 1;
+      letter-spacing: -.06em;
+      color: rgba(26,22,20,.03);
+      pointer-events: none;
+      user-select: none;
+    }
+    .cat-sa-inner { position: relative; z-index: 2; max-width: 900px; }
+    .cat-sa-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 40px; display: flex; align-items: center; gap: 10px; }
+    .cat-sa-eyebrow::before { content: ''; display: block; width: 18px; height: 1px; background: var(--coral-d); }
+    .cat-sa-claim {
+      font-family: var(--serif);
+      font-size: clamp(42px, 5.5vw, 82px);
+      line-height: .96;
+      letter-spacing: -.04em;
+      color: var(--dark);
+      margin-bottom: 48px;
+    }
+    .cat-sa-claim .grad-line {
+      background: var(--grad-vivid);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: italic;
+    }
+    .cat-sa-sub {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.72;
+      color: var(--mid);
+      max-width: 560px;
+    }
+
     /* ══ FEATURES ══ */
     .feats { padding: 120px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start; }
     .feat-ph { position: sticky; top: 80px; display: flex; justify-content: center; }
@@ -204,20 +231,21 @@
     .transform-row.after .transform-label { color: var(--coral-d); }
     .transform-text { font-size: 14px; color: var(--mid); line-height: 1.55; }
     .transform-row.after .transform-text { color: var(--dark); font-weight: 500; }
-    .fd { font-size: 16px; font-weight: 300; line-height: 1.75; color: var(--mid); margin-bottom: 28px; }
     .fpts { list-style: none; display: flex; flex-direction: column; gap: 14px; }
     .fpts li { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: var(--mid); line-height: 1.55; }
     .fpd { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; background: var(--grad); }
 
-    /* ══ VIBE SCORE ══ */
-    .vibe-sec { padding: 140px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; background: linear-gradient(160deg, rgba(254,169,150,.07) 0%, rgba(209,255,243,.09) 100%); border-top: 1px solid rgba(254,169,150,.12); border-bottom: 1px solid rgba(209,255,243,.2); position: relative; overflow: hidden; }
-    .vibe-sec-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 80% at 100% 50%, rgba(209,255,243,.2) 0%, transparent 65%), radial-gradient(ellipse 40% 60% at 0% 50%, rgba(254,169,150,.15) 0%, transparent 65%); }
+    /* ══ VIBE SCORE — light ══ */
+    .vibe-sec { padding: 140px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; position: relative; overflow: hidden; border-top: 1px solid rgba(26,22,20,.06); }
+    .vibe-sec-bg { position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 80% at 5% 50%, rgba(254,169,150,.08) 0%, transparent 65%),
+                  radial-gradient(ellipse 50% 70% at 95% 50%, rgba(209,255,243,.1) 0%, transparent 65%); }
     .vibe-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
     .vibe-eyebrow::before { content: ''; display: block; width: 18px; height: 1px; background: var(--coral-d); }
     .vibe-h2 { font-family: var(--serif); font-size: clamp(38px,3.8vw,58px); line-height: 1.02; letter-spacing: -.03em; color: var(--dark); margin-bottom: 24px; }
     .vibe-h2 em { font-style: italic; background: var(--grad-vivid); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .vibe-body { font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--mid); margin-bottom: 24px; }
-    .vibe-card { background: #fff; border-radius: 28px; padding: 40px; box-shadow: 0 20px 80px rgba(26,22,20,.1), 0 4px 20px rgba(26,22,20,.06); }
+    .vibe-card { background: #fff; border-radius: 28px; padding: 40px; box-shadow: 0 20px 80px rgba(26,22,20,.08), 0 4px 20px rgba(26,22,20,.04); }
     .vc-label { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; font-family: var(--sans); }
     .vc-score-row { display: flex; align-items: center; gap: 28px; margin-bottom: 32px; }
     .vc-ring { position: relative; width: 100px; height: 100px; flex-shrink: 0; }
@@ -239,89 +267,66 @@
     .tbar { flex: 1; border-radius: 4px 4px 0 0; background: var(--grad); opacity: 0; transform: scaleY(0); transform-origin: bottom; transition: transform .6s cubic-bezier(.22,1,.36,1), opacity .4s ease; }
     .tbar.go { opacity: 1; transform: scaleY(1); }
 
-    /* ══ CATEGORY CLAIM — grid-breaking editorial moment ══ */
-    .category-sec {
-      padding: 0;
+    /* ══ SIGNATURE MOMENT — full bleed, dark, one line ══ */
+    .signature-sec {
+      padding: 160px 56px;
       background: var(--dark);
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
-    .category-inner {
-      padding: 140px 56px 140px 56px;
-      position: relative;
-      z-index: 2;
-    }
-    .category-bg {
+    .sig-bg {
       position: absolute; inset: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse 60% 80% at 90% 50%, rgba(254,169,150,.07) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(209,255,243,.05) 0%, transparent 60%);
+      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(254,169,150,.05) 0%, transparent 65%);
     }
-    /* Oversized background text — breaks the grid intentionally */
-    .category-ghost {
-      position: absolute;
-      top: 50%; left: -2%;
-      transform: translateY(-50%);
+    /* Grain darker on dark bg */
+    .sig-grain {
+      position: absolute; inset: -50%; width: 200%; height: 200%;
+      pointer-events: none; opacity: .06;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .sig-inner { position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; }
+    .sig-pre {
+      font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(254,169,150,.5); margin-bottom: 48px;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+    }
+    .sig-pre::before, .sig-pre::after { content: ''; display: block; width: 40px; height: 1px; background: rgba(254,169,150,.3); }
+    .sig-statement {
       font-family: var(--serif);
-      font-size: clamp(120px, 16vw, 220px);
-      line-height: 1;
-      letter-spacing: -.05em;
-      color: rgba(255,255,255,.028);
-      white-space: nowrap;
-      pointer-events: none;
-      user-select: none;
-      z-index: 1;
-    }
-    .category-eyebrow {
-      font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
-      color: rgba(254,169,150,.6); margin-bottom: 40px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .category-eyebrow::before { content: ''; display: block; width: 18px; height: 1px; background: var(--coral); }
-    /* The big claim — intentionally oversized, slightly left-heavy */
-    .category-claim {
-      font-family: var(--serif);
-      font-size: clamp(48px, 6.5vw, 100px);
-      line-height: .95;
+      font-size: clamp(52px, 7vw, 108px);
+      line-height: .94;
       letter-spacing: -.04em;
       color: #FAF8F6;
-      max-width: 900px;
-      margin-bottom: 60px;
+      margin-bottom: 48px;
     }
-    .category-claim em {
+    .sig-statement em {
       font-style: italic;
       background: var(--grad);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    /* Three pillars in a row — asymmetric layout */
-    .category-pillars {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 2px;
-      margin-top: 80px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding-top: 48px;
+    .sig-sub {
+      font-size: 16px; font-weight: 300; line-height: 1.7;
+      color: rgba(250,248,246,.45);
+      max-width: 480px; margin: 0 auto;
     }
-    .cat-pillar { padding: 0 40px 0 0; }
-    .cat-pillar:not(:first-child) { padding-left: 40px; border-left: 1px solid rgba(255,255,255,.08); }
-    .cat-pillar-num { font-family: var(--serif); font-size: 13px; color: rgba(254,169,150,.5); margin-bottom: 16px; }
-    .cat-pillar-title { font-family: var(--serif); font-size: 22px; color: #FAF8F6; letter-spacing: -.01em; margin-bottom: 12px; line-height: 1.1; }
-    .cat-pillar-body { font-size: 14px; font-weight: 300; color: rgba(250,248,246,.5); line-height: 1.65; }
 
-    /* ══ MUSCLE FOCUS ══ */
-    .muscle-sec { padding: 140px 56px; background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,.06); }
+    /* ══ MUSCLE FOCUS — dark, revelation ══ */
+    .muscle-sec { padding: 140px 56px; background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,.05); }
     .muscle-bg { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(254,169,150,.06) 0%, transparent 60%), radial-gradient(ellipse 40% 60% at 20% 50%, rgba(209,255,243,.04) 0%, transparent 60%); }
-    .muscle-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: rgba(254,169,150,.7); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .muscle-kicker { font-size: 12px; font-weight: 500; letter-spacing: .04em; color: rgba(254,169,150,.6); margin-bottom: 16px; font-family: var(--sans); font-style: italic; }
+    .muscle-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: rgba(254,169,150,.5); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
     .muscle-eyebrow::before { content: ''; display: block; width: 18px; height: 1px; background: var(--coral); }
     .muscle-h2 { font-family: var(--serif); font-size: clamp(34px,3.5vw,52px); line-height: 1.04; letter-spacing: -.03em; color: #FAF8F6; margin-bottom: 24px; }
     .muscle-h2 em { font-style: italic; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .muscle-body { font-size: 17px; font-weight: 300; line-height: 1.75; color: rgba(250,248,246,.6); margin-bottom: 32px; }
+    .muscle-insight { font-size: 15px; font-weight: 400; line-height: 1.65; color: rgba(250,248,246,.5); margin-bottom: 28px; padding: 20px 24px; border-left: 2px solid rgba(254,169,150,.3); background: rgba(254,169,150,.04); border-radius: 0 12px 12px 0; font-style: italic; }
+    .muscle-body { font-size: 17px; font-weight: 300; line-height: 1.75; color: rgba(250,248,246,.55); margin-bottom: 32px; }
     .muscle-points { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
-    .muscle-points li { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: rgba(250,248,246,.55); line-height: 1.55; }
+    .muscle-points li { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: rgba(250,248,246,.5); line-height: 1.55; }
     .muscle-dot { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; background: var(--grad); }
-    .coming-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(254,169,150,.1); border: 1px solid rgba(254,169,150,.22); border-radius: 100px; padding: 8px 18px; }
+    .coming-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(254,169,150,.08); border: 1px solid rgba(254,169,150,.2); border-radius: 100px; padding: 8px 18px; }
     .coming-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--coral); animation: pulse 2s ease infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
     .coming-badge-text { font-size: 12px; font-weight: 500; color: var(--coral); letter-spacing: .04em; font-family: var(--sans); }
@@ -348,7 +353,7 @@
     .wli:focus { border-color: var(--coral); box-shadow: 0 0 0 4px rgba(254,169,150,.18); }
     .wlb-btn { padding: 17px 32px; border-radius: 100px; border: none; background: var(--grad); color: var(--dark); font-size: 14px; font-weight: 600; font-family: var(--sans); letter-spacing: .03em; cursor: none; white-space: nowrap; transition: transform .25s, box-shadow .25s, filter .25s; box-shadow: 0 6px 28px rgba(254,169,150,.45); }
     .wlb-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(254,169,150,.55); filter: brightness(1.04); }
-    .wln { font-size: 12px; color: var(--muted); position: relative; z-index: 2; }
+    .wl-cta-micro { font-size: 12px; color: var(--muted); margin-top: 14px; position: relative; z-index: 2; line-height: 1.6; }
     .wlok { display: none; background: rgba(209,255,243,.25); border: 1px solid var(--mint-d); color: var(--dark); padding: 17px 32px; border-radius: 100px; font-size: 14px; font-weight: 500; max-width: 480px; margin: 0 auto; position: relative; z-index: 2; }
     .srow { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 48px; position: relative; z-index: 2; }
     .snote { font-size: 12px; color: var(--muted); }
@@ -395,10 +400,8 @@
       .feats { grid-template-columns: 1fr; padding: 80px 24px; gap: 56px; }
       .feat-ph { position: relative; top: auto; }
       .vibe-sec { grid-template-columns: 1fr; padding: 80px 24px; gap: 56px; }
-      .category-inner { padding: 80px 24px; }
-      .category-pillars { grid-template-columns: 1fr; gap: 32px; }
-      .cat-pillar { padding: 0; border: none !important; }
-      .cat-pillar:not(:first-child) { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,.08); padding-top: 32px; }
+      .category-standalone { padding: 100px 24px; }
+      .signature-sec { padding: 100px 24px; }
       .muscle-sec { grid-template-columns: 1fr; padding: 80px 24px; gap: 56px; }
       .stats { grid-template-columns: 1fr 1fr; }
       .stat:nth-child(3) { grid-column: span 2; border-right: none; border-top: 1px solid rgba(26,22,20,.07); }
@@ -411,7 +414,6 @@
       .psw { flex-wrap: wrap; }
     }
   </style>
-  <link rel="icon" type="image/svg+xml" href="./assets/Alora_App_Tile_A1.svg" />
 </head>
 <body>
 
@@ -444,20 +446,16 @@
   <div class="hero-mesh"></div>
   <div class="hero-text">
     <div class="hero-chip"><div class="chip-dot"></div><span class="chip-txt">Founding Instructor Applications Open &nbsp;&middot;&nbsp; iOS &nbsp;&middot;&nbsp; June 2026</span></div>
-
     <h1 class="hero-h1-interrupt">
       You teach the same<br>
       class twice.<br>
       <em>You don&rsquo;t even<br>know it.</em>
     </h1>
-
     <div class="hero-resolution">
       <div class="hero-resolution-line"></div>
       <span class="hero-resolution-text">Plan &nbsp;&middot;&nbsp; Reflect &nbsp;&middot;&nbsp; Grow</span>
     </div>
-
     <p class="hero-sub">Alora captures what&rsquo;s working, surfaces what isn&rsquo;t, and compounds every class into a teaching practice that actually improves over time.</p>
-
     <div class="hero-acts">
       <a href="#waitlist" class="btn-p" onclick="toWL();return false;">
         Apply for Early Access
@@ -465,13 +463,11 @@
       </a>
       <span class="h-aside">Founding spots are limited</span>
     </div>
-
     <div class="social">
       <div class="avs"><div class="av">S</div><div class="av">M</div><div class="av">J</div><div class="av">A</div></div>
       <div class="pt"><strong>Serious instructors</strong> already in the first cohort</div>
     </div>
   </div>
-
   <div class="hero-ph">
     <div class="iphone" style="width:272px;height:588px;">
       <div class="iph-aura"></div>
@@ -482,10 +478,7 @@
       <div class="iph-sr" style="top:138px;height:60px;"></div>
       <div class="iph-bezel" style="border-radius:47px;top:5px;left:5px;right:5px;bottom:5px;">
         <div class="iph-screen" style="border-radius:46px;top:2px;left:2px;right:2px;bottom:2px;">
-          <!--
-            SCREENSHOT SWAP:
-            <div class="ss-wrap"><img src="./assets/screenshot-dashboard.png" alt="Alora" /></div>
-          -->
+          <!-- SCREENSHOT SWAP: <div class="ss-wrap"><img src="./assets/screenshot-dashboard.png" alt="Alora" /></div> -->
           <svg style="position:absolute;width:0;height:0"><defs>
             <linearGradient id="vg0" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fea996"/><stop offset="100%" stop-color="#d1fff3"/></linearGradient>
           </defs></svg>
@@ -535,6 +528,26 @@
   <div class="stat r d2"><div class="sn"><span>&#8734;</span></div><div class="sl">The ceiling for instructors who treat their teaching as a craft worth studying</div></div>
 </div>
 
+<!-- CATEGORY CLAIM — standalone, light -->
+<section class="category-standalone">
+  <div class="cat-sa-bg"></div>
+  <div class="cat-sa-ghost">01</div>
+  <div class="cat-sa-inner">
+    <div class="cat-sa-eyebrow r">A new standard</div>
+    <h2 class="cat-sa-claim r d1">
+      Pilates instructors<br>
+      have had planners.<br>
+      Scheduling tools.<br>
+      Note apps.<br><br>
+      Nobody has ever built<br>
+      a system designed to make<br>
+      them <span class="grad-line">measurably better.</span><br><br>
+      Until now.
+    </h2>
+    <p class="cat-sa-sub r d2">This isn&rsquo;t a planning app. It&rsquo;s the first system built around a single goal: making Pilates instructors genuinely, demonstrably better at their craft.</p>
+  </div>
+</section>
+
 <!-- FEATURES -->
 <section class="feats" id="features">
   <div class="feat-ph">
@@ -549,8 +562,7 @@
         <div class="iph-screen">
           <svg style="position:absolute;width:0;height:0"><defs><linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#fea996"/><stop offset="100%" stop-color="#d1fff3"/></linearGradient></defs></svg>
           <div class="di"></div><div class="glare"></div>
-
-          <!-- PLAN — SCREENSHOT SWAP: <div class="asc" id="sp"><div class="ss-wrap"><img src="./assets/screenshot-plan.png" /></div></div> -->
+          <!-- PLAN: SCREENSHOT SWAP: <div class="asc" id="sp"><div class="ss-wrap"><img src="./assets/screenshot-plan.png" /></div></div> -->
           <div class="asc" id="sp">
             <div class="ahd"><div class="ahd-ey">Class Planning</div><div class="ahd-ti">Reformer Flow</div><div class="ahd-su">Tuesday &middot; 10:00 AM &middot; 55 min</div></div>
             <div class="abd">
@@ -566,8 +578,7 @@
             </div>
             <div class="anv"><div class="pip"></div><div class="pip on"></div><div class="pip"></div><div class="pip"></div></div>
           </div>
-
-          <!-- REFLECT — SCREENSHOT SWAP: <div class="asc out" id="sr"><div class="ss-wrap"><img src="./assets/screenshot-reflect.png" /></div></div> -->
+          <!-- REFLECT: SCREENSHOT SWAP: <div class="asc out" id="sr"><div class="ss-wrap"><img src="./assets/screenshot-reflect.png" /></div></div> -->
           <div class="asc out" id="sr">
             <div class="ahd"><div class="ahd-ey">Post-Class Reflection</div><div class="ahd-ti">How did it go?</div><div class="ahd-su">Reformer Flow &middot; just now</div></div>
             <div class="abd">
@@ -588,8 +599,7 @@
             </div>
             <div class="anv"><div class="pip"></div><div class="pip"></div><div class="pip on"></div><div class="pip"></div></div>
           </div>
-
-          <!-- GROW — SCREENSHOT SWAP: <div class="asc out" id="sg"><div class="ss-wrap"><img src="./assets/screenshot-analytics.png" /></div></div> -->
+          <!-- GROW: SCREENSHOT SWAP: <div class="asc out" id="sg"><div class="ss-wrap"><img src="./assets/screenshot-analytics.png" /></div></div> -->
           <div class="asc out" id="sg">
             <div class="ahd"><div class="ahd-ey">Analytics</div><div class="ahd-ti">Teaching Profile</div><div class="ahd-su">Last 30 days</div></div>
             <div class="abd">
@@ -634,23 +644,21 @@
       <button class="pb" id="pb-reflect" onclick="sf('reflect')">Reflect</button>
       <button class="pb" id="pb-grow" onclick="sf('grow')">Grow</button>
     </div>
-
     <div class="fp act r d2" id="fp-plan">
       <div class="transform-block">
-        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Rebuilding the same class from memory, hoping it comes together in the room</span></div>
-        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">A library of flows you refine continuously &mdash; built once, improved every time</span></div>
+        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Rebuilding the same class from memory every week, hoping it comes together in the room</span></div>
+        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">A library of flows you refine continuously &mdash; built once, made better every time you teach it</span></div>
       </div>
       <ul class="fpts">
-        <li><div class="fpd"></div>Stop rebuilding classes from scratch &mdash; save flows and make them better over time</li>
+        <li><div class="fpd"></div>Stop rebuilding classes from scratch &mdash; save flows and improve them over time</li>
         <li><div class="fpd"></div>350+ exercises searchable by apparatus, body region, and level</li>
         <li><div class="fpd"></div>Structure your warm up, main sequence, and cool down the way you actually teach</li>
         <li><div class="fpd"></div>Export class plans as PDFs to share with clients or studios</li>
       </ul>
     </div>
-
     <div class="fp" id="fp-reflect">
       <div class="transform-block">
-        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">A feeling after class you can&rsquo;t name, forgotten before the next one starts</span></div>
+        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">A feeling you forget by the next class &mdash; you don&rsquo;t remember what worked or what didn&rsquo;t</span></div>
         <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">A score, a pattern, a note to your future self &mdash; captured while it&rsquo;s still real</span></div>
       </div>
       <ul class="fpts">
@@ -660,15 +668,14 @@
         <li><div class="fpd"></div>A teaching record that compounds the longer you use it</li>
       </ul>
     </div>
-
     <div class="fp" id="fp-grow">
       <div class="transform-block">
-        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Improving by feel, with no real way to know if anything has changed</span></div>
-        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">Watching your Teaching Profile evolve &mdash; in data, over months and years</span></div>
+        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Improving by feel, with no real way to know if anything has actually changed</span></div>
+        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">Watching your Teaching Profile evolve in data &mdash; across weeks, months, and your entire career</span></div>
       </div>
       <ul class="fpts">
         <li><div class="fpd"></div>A Teaching Profile radar that updates after every reflection</li>
-        <li><div class="fpd"></div>Vibe Score trends across weeks, months, and your entire career</li>
+        <li><div class="fpd"></div>Vibe Score trends that show you the shape of your growth</li>
         <li><div class="fpd"></div>Streaks and consistency data that keep you honest</li>
         <li><div class="fpd"></div>Insights that surface exactly where to focus next</li>
       </ul>
@@ -676,7 +683,7 @@
   </div>
 </section>
 
-<!-- VIBE SCORE -->
+<!-- VIBE SCORE — light -->
 <section class="vibe-sec" id="vibe">
   <div class="vibe-sec-bg"></div>
   <div class="r">
@@ -724,53 +731,36 @@
   </div>
 </section>
 
-<!-- CATEGORY CLAIM — grid-breaking moment -->
-<section class="category-sec">
-  <div class="category-bg"></div>
-  <div class="category-ghost">Alora</div>
-  <div class="category-inner">
-    <div class="category-eyebrow r">A new standard</div>
-    <h2 class="category-claim r d1">
-      Pilates instructors<br>
-      have had planners.<br>
-      Scheduling tools.<br>
-      Note apps.<br><br>
-      Nobody has ever built<br>
-      a system designed to make<br>
-      them <em>measurably better.</em><br><br>
-      Until now.
+<!-- SIGNATURE MOMENT — full bleed dark, one statement -->
+<section class="signature-sec">
+  <div class="sig-bg"></div>
+  <div class="sig-grain"></div>
+  <div class="sig-inner">
+    <div class="sig-pre r">The uncomfortable truth</div>
+    <h2 class="sig-statement r d1">
+      Most instructors<br>
+      don&rsquo;t improve.<br>
+      They just <em>repeat.</em>
     </h2>
-    <div class="category-pillars r d2">
-      <div class="cat-pillar">
-        <div class="cat-pillar-num">01</div>
-        <div class="cat-pillar-title">The teaching system Pilates has never had.</div>
-        <div class="cat-pillar-body">Not a planner. Not a scheduler. A system that captures, reflects, and compounds every class into measurable growth.</div>
-      </div>
-      <div class="cat-pillar">
-        <div class="cat-pillar-num">02</div>
-        <div class="cat-pillar-title">This is how serious instructors operate now.</div>
-        <div class="cat-pillar-body">The instructors who will define this industry in five years are the ones who study how they teach. Alora makes that possible.</div>
-      </div>
-      <div class="cat-pillar">
-        <div class="cat-pillar-num">03</div>
-        <div class="cat-pillar-title">You&rsquo;re not for everyone. Neither are we.</div>
-        <div class="cat-pillar-body">Alora is built for instructors who can&rsquo;t stop thinking about their craft. If that&rsquo;s you &mdash; you already know this is for you.</div>
-      </div>
-    </div>
+    <p class="sig-sub r d2">You forget what worked. You repeat the safe class. You have no way to know if you&rsquo;re actually getting better. Alora changes that.</p>
   </div>
 </section>
 
-<!-- MUSCLE FOCUS -->
+<!-- MUSCLE FOCUS — dark, revelation -->
 <section class="muscle-sec">
   <div class="muscle-bg"></div>
   <div class="r">
     <div class="muscle-eyebrow">Muscle Focus</div>
-    <h2 class="muscle-h2">You might be loading<br>the same muscles<br><em>every single week.</em></h2>
-    <p class="muscle-body">Most instructors don&rsquo;t realise they have unconscious bias in their class design. Alora&rsquo;s Muscle Focus maps every exercise across every class &mdash; surfacing the patterns you can&rsquo;t see when you&rsquo;re in the room.</p>
+    <h2 class="muscle-h2">This is what no<br>other app shows you.<br><em>What you&rsquo;re actually training.</em></h2>
+    <div class="muscle-insight r">
+      &ldquo;Most instructors don&rsquo;t know what they&rsquo;re actually training. They think they do &mdash; but the data tells a different story.&rdquo;
+    </div>
+    <p class="muscle-body">Alora&rsquo;s Muscle Focus maps every exercise across every class. It reveals the unconscious patterns in your programming &mdash; the muscles you&rsquo;re overloading, the ones you&rsquo;re ignoring, and the blind spots your clients will eventually feel.</p>
     <ul class="muscle-points">
-      <li><div class="muscle-dot"></div>See which muscle groups you&rsquo;re loading as you build each class</li>
-      <li><div class="muscle-dot"></div>Track balance across your whole schedule over time</li>
-      <li><div class="muscle-dot"></div>Spot the gaps before your clients feel them</li>
+      <li><div class="muscle-dot"></div>See what you&rsquo;re overtraining before it becomes a problem</li>
+      <li><div class="muscle-dot"></div>Identify the blind spots in your programming</li>
+      <li><div class="muscle-dot"></div>Refine your class design with data you can actually see</li>
+      <li><div class="muscle-dot"></div>Track muscle balance across your whole schedule over time</li>
     </ul>
     <div class="coming-badge">
       <div class="coming-badge-dot"></div>
@@ -789,13 +779,9 @@
           <div class="di"></div><div class="glare"></div>
           <!--
             SCREENSHOT SWAP:
-            <div class="ss-wrap">
-              <img src="./assets/screenshot-muscle.png" alt="Muscle Focus" />
-            </div>
-            Or video:
-            <div class="ss-wrap">
-              <video autoplay loop muted playsinline src="./assets/muscle-focus.mp4"></video>
-            </div>
+            <div class="ss-wrap"><img src="./assets/screenshot-muscle.png" alt="Muscle Focus" /></div>
+            OR video:
+            <div class="ss-wrap"><video autoplay loop muted playsinline src="./assets/muscle-focus.mp4"></video></div>
           -->
           <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px 24px;background:#faf8f6;">
             <div style="font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-family:var(--sans);">Muscle Focus</div>
@@ -816,28 +802,17 @@
 <section class="wlsec" id="waitlist">
   <div class="wlb1"></div>
   <div class="wlb2"></div>
-
   <div class="lchip r"><div class="lcd"></div><span class="lct">Launching <strong>30 June 2026</strong> &nbsp;&middot;&nbsp; iOS &nbsp;&middot;&nbsp; Pre-order opening soon</span></div>
-
-  <h2 class="wlh r">
-    Become a<br>
-    <span class="g"><em>Founding Instructor.</em></span>
-  </h2>
-
-  <p class="wl-founding r">
-    Founding instructors get first access, direct input into the product roadmap, and lifetime early-adopter pricing.<br>
-    <strong>This isn&rsquo;t a waitlist. It&rsquo;s an application.</strong>
-  </p>
-
+  <h2 class="wlh r">Become a<br><span class="g"><em>Founding Instructor.</em></span></h2>
+  <p class="wl-founding r">Founding instructors get first access, direct input into the product roadmap, and lifetime early-adopter pricing.<br><strong>This isn&rsquo;t a waitlist. It&rsquo;s an application.</strong></p>
   <div id="wlForm">
     <div class="wlf r">
       <input type="email" class="wli" id="wlEmail" placeholder="your@email.com"/>
       <button class="wlb-btn" onclick="doWL()">Apply Now</button>
     </div>
-    <p class="wln r" style="margin-top:14px;">Founding spots are limited &mdash; first cohort only.</p>
+    <p class="wl-cta-micro r">We&rsquo;re onboarding a small first cohort &mdash; for instructors serious about getting better.</p>
   </div>
   <div class="wlok" id="wlOk">&#10003; Application received &mdash; we&rsquo;ll be in touch before launch.</div>
-
   <div class="srow r">
     <span class="snote">Coming to</span>
     <a href="#" class="sbtn"><svg width="18" height="18" viewBox="0 0 22 22" fill="currentColor" style="opacity:.8"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.37 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg><span class="sbt"><span>Available on the</span><span>App Store</span></span></a>
@@ -859,42 +834,24 @@
   const cur=document.getElementById('cur');
   document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';});
   document.querySelectorAll('a,button,input,.pb').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('big'));el.addEventListener('mouseleave',()=>cur.classList.remove('big'));});
-
   const nav=document.getElementById('nav');
   window.addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>50),{passive:true});
-
-  const ro=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});
-  },{threshold:.12});
+  const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.12});
   document.querySelectorAll('.r').forEach(el=>ro.observe(el));
-
   const vibeSec=document.getElementById('vibe');
   if(vibeSec){
     const vro=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          setTimeout(()=>{
-            const f=document.getElementById('vcfill');
-            if(f)f.classList.add('go');
-            document.querySelectorAll('.tbar').forEach(b=>b.classList.add('go'));
-          },400);
-          vro.unobserve(e.target);
-        }
-      });
+      entries.forEach(e=>{if(e.isIntersecting){setTimeout(()=>{const f=document.getElementById('vcfill');if(f)f.classList.add('go');document.querySelectorAll('.tbar').forEach(b=>b.classList.add('go'));},400);vro.unobserve(e.target);}});
     },{threshold:.2});
     vro.observe(vibeSec);
   }
-
   let barDone=false;
   const fbar=document.getElementById('fbar');
   const wlSec=document.getElementById('waitlist');
   setTimeout(()=>{if(!barDone)fbar.classList.add('show');},3500);
-  new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)fbar.classList.remove('show');else if(!barDone)fbar.classList.add('show');});
-  },{threshold:.15}).observe(wlSec);
+  new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)fbar.classList.remove('show');else if(!barDone)fbar.classList.add('show');});},{threshold:.15}).observe(wlSec);
   function dimBar(){barDone=true;fbar.classList.remove('show');}
   function toWL(){document.getElementById('waitlist').scrollIntoView({behavior:'smooth'});setTimeout(dimBar,800);}
-
   const scrs={plan:'sp',reflect:'sr',grow:'sg'};
   const pans={plan:'fp-plan',reflect:'fp-reflect',grow:'fp-grow'};
   const btns={plan:'pb-plan',reflect:'pb-reflect',grow:'pb-grow'};
@@ -909,7 +866,6 @@
     document.getElementById(pans[n]).classList.add('act');
     document.getElementById(btns[n]).classList.add('on');
   }
-
   function doWL(){
     const v=document.getElementById('wlEmail').value.trim();
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){
@@ -920,14 +876,11 @@
       return;
     }
     // TODO: POST to Supabase edge function
-    // fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
     document.getElementById('wlForm').style.display='none';
     document.getElementById('wlOk').style.display='block';
     dimBar();
   }
-  document.addEventListener('DOMContentLoaded',()=>{
-    document.getElementById('wlEmail').addEventListener('keypress',e=>{if(e.key==='Enter')doWL();});
-  });
+  document.addEventListener('DOMContentLoaded',()=>{document.getElementById('wlEmail').addEventListener('keypress',e=>{if(e.key==='Enter')doWL();});});
 </script>
 </body>
 </html>
