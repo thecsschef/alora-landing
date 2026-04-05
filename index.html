@@ -241,6 +241,7 @@
     .fpts li { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: var(--mid); line-height: 1.55; }
     .fpd { width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; background: var(--grad); }
     .mob-feat-header { display: none; }
+    .mob-features { display: none; }
 
     /* ══ VIBE SCORE — light ══ */
     .vibe-sec { padding: 140px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; position: relative; overflow: hidden; border-top: 1px solid rgba(26,22,20,.06); }
@@ -404,14 +405,45 @@
       .hero-resolution { justify-content: center; }
       .social { justify-content: center; }
       .hero-ph { order: -1; }
-      .feats { grid-template-columns: 1fr; padding: 80px 24px; gap: 56px; }
-      .feat-ph { display: flex; position: relative; top: auto; margin-bottom: 48px; justify-content: center; }
+      .feats {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 24px;
+        gap: 0;
+      }
+      .feat-ph { display: none; }
       .psw { display: none; }
-      .fp { display: block !important; animation: none; }
-      .fp + .fp { margin-top: 48px; padding-top: 48px; border-top: 1px solid rgba(26,22,20,.07); }
-      .mob-feat-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
-      .mob-feat-num { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-      .mob-feat-title { font-family: var(--serif); font-size: 32px; color: var(--dark); letter-spacing: -.02em; }
+      .feat-hd { margin-bottom: 0; }
+      .fp { display: none !important; animation: none; }
+      .mob-features { display: flex; flex-direction: column; }
+      .mob-feat-block {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 48px 0;
+        border-bottom: 1px solid rgba(26,22,20,.07);
+      }
+      .mob-feat-block:last-child { border-bottom: none; }
+      .mob-feat-label {
+        font-size: 10px; font-weight: 600; letter-spacing: .16em;
+        text-transform: uppercase; color: var(--muted);
+        margin-bottom: 10px; display: flex; align-items: center; gap: 10px;
+      }
+      .mob-feat-label::before { content: ''; display: block; width: 18px; height: 1px; background: var(--coral-d); }
+      .mob-feat-title {
+        font-family: var(--serif); font-size: 36px; line-height: 1.05;
+        letter-spacing: -.025em; color: var(--dark); margin-bottom: 28px;
+      }
+      .mob-feat-phone {
+        width: 240px; height: 520px; position: relative; margin: 0 auto 28px;
+      }
+      .mob-feat-phone .iph-frame { border-radius: 44px; }
+      .mob-feat-phone .iph-bezel { top:5px;left:5px;right:5px;bottom:5px;border-radius:40px; }
+      .mob-feat-phone .iph-screen { top:2px;left:2px;right:2px;bottom:2px;border-radius:39px; }
+      .mob-feat-phone .iph-sl { left:-3px; }
+      .mob-feat-phone .iph-sr { right:-3px; }
+      .mob-feat-phone .glare { border-radius: 39px 39px 0 0; }
+      .mob-feat-phone .ss-wrap { border-radius: 39px; }
       .vibe-sec { grid-template-columns: 1fr; padding: 80px 24px; gap: 56px; }
       .category-standalone { padding: 100px 24px; }
       .signature-sec { padding: 100px 24px; }
@@ -618,6 +650,98 @@
     </div>
     <div class="fp" id="fp-grow">
       <div class="mob-feat-header"><span class="mob-feat-num">03</span><span class="mob-feat-title">Grow</span></div>
+      <div class="transform-block">
+        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Improving by feel, with no real way to know if anything has actually changed</span></div>
+        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">Watching your Teaching Profile evolve in data &mdash; across weeks, months, and your entire career</span></div>
+      </div>
+      <ul class="fpts">
+        <li><div class="fpd"></div>A Teaching Profile radar that updates after every reflection</li>
+        <li><div class="fpd"></div>Vibe Score trends that show you the shape of your growth</li>
+        <li><div class="fpd"></div>Streaks and consistency data that keep you honest</li>
+        <li><div class="fpd"></div>Insights that surface exactly where to focus next</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mob-features">
+    <div class="mob-feat-block">
+      <div class="mob-feat-label">01 &mdash; Plan</div>
+      <div class="mob-feat-title">Your class,<br><em>precisely built.</em></div>
+      <div class="mob-feat-phone iphone">
+        <div class="iph-frame"></div>
+        <div class="iph-sl" style="top:110px;height:28px;"></div>
+        <div class="iph-sl" style="top:148px;height:28px;"></div>
+        <div class="iph-sl" style="top:98px;height:16px;"></div>
+        <div class="iph-sr" style="top:124px;height:52px;"></div>
+        <div class="iph-bezel">
+          <div class="iph-screen">
+            <div class="glare"></div>
+            <div class="ss-wrap">
+              <video autoplay loop muted playsinline src="./assets/screenshot-plan.mp4"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="transform-block">
+        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Rebuilding the same class from memory every week, hoping it comes together in the room</span></div>
+        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">A library of flows you refine continuously &mdash; built once, made better every time you teach it</span></div>
+      </div>
+      <ul class="fpts">
+        <li><div class="fpd"></div>Stop rebuilding classes from scratch &mdash; save flows and improve them over time</li>
+        <li><div class="fpd"></div>350+ exercises searchable by apparatus, body region, and level</li>
+        <li><div class="fpd"></div>Structure your warm up, main sequence, and cool down the way you actually teach</li>
+        <li><div class="fpd"></div>Export class plans as PDFs to share with clients or studios</li>
+      </ul>
+    </div>
+
+    <div class="mob-feat-block">
+      <div class="mob-feat-label">02 &mdash; Reflect</div>
+      <div class="mob-feat-title">Every class<br><em>teaches you something.</em></div>
+      <div class="mob-feat-phone iphone">
+        <div class="iph-frame"></div>
+        <div class="iph-sl" style="top:110px;height:28px;"></div>
+        <div class="iph-sl" style="top:148px;height:28px;"></div>
+        <div class="iph-sl" style="top:98px;height:16px;"></div>
+        <div class="iph-sr" style="top:124px;height:52px;"></div>
+        <div class="iph-bezel">
+          <div class="iph-screen">
+            <div class="glare"></div>
+            <div class="ss-wrap">
+              <video autoplay loop muted playsinline src="./assets/screenshot-reflect.mp4"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="transform-block">
+        <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">A feeling you forget by the next class &mdash; you don&rsquo;t remember what worked or what didn&rsquo;t</span></div>
+        <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">A score, a pattern, a note to your future self &mdash; captured while it&rsquo;s still real</span></div>
+      </div>
+      <ul class="fpts">
+        <li><div class="fpd"></div>Actually see if you&rsquo;re getting better &mdash; not just feel like it</li>
+        <li><div class="fpd"></div>Your Vibe Score &mdash; one honest number that doesn&rsquo;t lie</li>
+        <li><div class="fpd"></div>Rate energy, flow, timing, engagement, and confidence after every class</li>
+        <li><div class="fpd"></div>A teaching record that compounds the longer you use it</li>
+      </ul>
+    </div>
+
+    <div class="mob-feat-block">
+      <div class="mob-feat-label">03 &mdash; Grow</div>
+      <div class="mob-feat-title">See the instructor<br><em>you&rsquo;re becoming.</em></div>
+      <div class="mob-feat-phone iphone">
+        <div class="iph-frame"></div>
+        <div class="iph-sl" style="top:110px;height:28px;"></div>
+        <div class="iph-sl" style="top:148px;height:28px;"></div>
+        <div class="iph-sl" style="top:98px;height:16px;"></div>
+        <div class="iph-sr" style="top:124px;height:52px;"></div>
+        <div class="iph-bezel">
+          <div class="iph-screen">
+            <div class="glare"></div>
+            <div class="ss-wrap">
+              <video autoplay loop muted playsinline src="./assets/screenshot-analytics.mp4"></video>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="transform-block">
         <div class="transform-row before"><span class="transform-label">Before</span><span class="transform-text">Improving by feel, with no real way to know if anything has actually changed</span></div>
         <div class="transform-row after"><span class="transform-label">After</span><span class="transform-text">Watching your Teaching Profile evolve in data &mdash; across weeks, months, and your entire career</span></div>
